@@ -4,3 +4,31 @@
 @media(max-width:950px){.main-nav{gap:15px}.header-cta{display:none}.hero{padding-left:6%;padding-right:6%}.section,.faq-section{padding-left:6%;padding-right:6%}.disease-grid{grid-template-columns:repeat(2,1fr)}.how-section{padding-left:6%;padding-right:6%;gap:30px}.qr-section{padding-left:6%;padding-right:6%;gap:35px}}
 @media(max-width:680px){.site-header{height:70px;padding:0 5%}.menu-toggle{display:block}.main-nav{display:none;position:absolute;top:70px;left:0;right:0;background:white;padding:20px 6%;box-shadow:0 12px 20px #173d4912;flex-direction:column;gap:20px}.main-nav.open{display:flex}.hero{grid-template-columns:1fr;padding:65px 7% 45px;gap:5px}.hero h1{font-size:47px}.hero-visual{height:330px;transform:scale(.88)}.trust-strip{padding:22px 6%;gap:12px}.trust-strip>div{gap:8px}.trust-strip>div>span{font-size:18px}.trust-strip p{font-size:9px}.trust-strip b{font-size:10px}.section{padding:65px 6%}.section-heading{display:block}.section-heading>p{margin-top:15px}.filter-row{align-items:flex-start;gap:12px;flex-direction:column}.disease-grid{gap:11px}.disease-card{padding:16px;min-height:195px}.disease-card h3{font-size:13px}.how-section{grid-template-columns:1fr;padding:60px 6%;gap:28px}.how-intro h2{font-size:37px}.steps{grid-template-columns:1fr;gap:10px}.step{min-height:0;padding:17px}.step-icon{margin:10px 0}.qr-section{grid-template-columns:1fr;padding:65px 6%;gap:30px}.qr-panel{padding:22px}.faq-section{padding:65px 6%}.footer-main{grid-template-columns:1fr 1fr;gap:30px}.footer-brand{grid-column:1/-1}.team-column{grid-column:1/-1}.footer-bottom{flex-direction:column;gap:8px}.detail-section{padding:35px 6%}.detail-hero{padding:23px;align-items:flex-start}.detail-hero h2{font-size:25px}.detail-grid{grid-template-columns:1fr}.symptom-form{grid-template-columns:1fr 1fr}}
 @media(max-width:390px){.disease-grid{grid-template-columns:1fr}.disease-card{min-height:160px}.hero h1{font-size:41px}.hero-actions{flex-wrap:wrap}.trust-strip{grid-template-columns:1fr}.footer-main{grid-template-columns:1fr}.footer-brand,.team-column{grid-column:auto}}
+
+
+/* VITASCAN: navegación multipágina */
+[hidden]{display:none!important}
+.nav-dropdown{position:relative;display:flex;align-items:center}
+.dropdown-toggle{border:0;background:transparent;cursor:pointer;color:#557078;font-weight:700;font-size:12px;padding:12px 0}
+.dropdown-toggle:hover,.dropdown-toggle[aria-expanded="true"]{color:var(--bondi)}
+.dropdown-menu{display:none;position:absolute;top:100%;left:-15px;width:235px;max-height:70vh;overflow:auto;background:white;border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);padding:10px;z-index:30}
+.nav-dropdown.open .dropdown-menu,.nav-dropdown:focus-within .dropdown-menu{display:flex;flex-direction:column}
+.dropdown-menu a{display:block;padding:10px 12px;border-radius:8px;font-size:12px}
+.dropdown-menu a:hover{background:var(--pale)}
+.page-intro{background:linear-gradient(110deg,#e8f9f5,#f7fcfb);padding:86px max(8%,calc((100% - 1100px)/2)) 75px}
+.page-intro h1{font:800 clamp(36px,5vw,56px)/1.15 "Manrope",sans-serif;letter-spacing:-2px;color:var(--navy);margin:18px 0}
+.page-intro h1 span{color:var(--bondi)}
+.page-intro>p{font-size:15px;line-height:1.8;max-width:690px;color:var(--muted)}
+.catalog-section{min-height:450px}
+.disease-card{display:flex;flex-direction:column;cursor:pointer}
+.disease-card:hover{transform:translateY(-4px)}
+.section-button{margin-top:32px}
+.standalone-steps{grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.standalone-detail{min-height:65vh}
+.detail-hero h1{font:800 clamp(28px,4vw,38px)/1.2 "Manrope",sans-serif;color:var(--navy);margin:5px 0 10px}
+.detail-card h2{font:800 15px "Manrope",sans-serif;color:var(--navy);margin:0 0 13px}
+.detail-card h2:not(:first-child){margin-top:22px}
+.detail-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}
+.qr-direct{display:block;margin-top:16px;color:var(--bondi-dark);font-size:12px;font-weight:700;text-decoration:underline}
+@media(max-width:950px){.site-header{gap:15px}.main-nav{gap:12px}}
+@media(max-width:680px){.nav-dropdown{display:block}.dropdown-toggle{padding:0}.dropdown-menu{position:static;display:none;box-shadow:none;border:0;border-radius:0;padding:6px 0 0 10px;max-height:40vh;width:auto}.nav-dropdown.open .dropdown-menu{display:flex}.nav-dropdown:not(.open) .dropdown-menu{display:none}.page-intro{padding:65px 6% 48px}.standalone-steps{grid-template-columns:1fr}.detail-hero h1{font-size:27px}}
