@@ -1,43 +1,38 @@
 # VITASCAN
 
-Prototipo web educativo para consultar información general sobre infecciones mediante fichas individuales y códigos QR.
+Sitio web educativo de información y orientación sobre VIH-1, VIH-2, hepatitis B y sífilis. Cada enfermedad dispone de una ficha HTML independiente con apartados detallados y fuentes de información.
 
-## Estructura
+## Estructura del sitio
 
-- `index.html`: estructura de la página, navegación y secciones.
-- `css/styles.css`: paleta visual, tarjetas, banners y diseño adaptable.
-- `js/script.js`: fichas informativas, filtros, navegación por identificador y generación de códigos QR.
+- `index.html`: página de inicio y accesos a las cuatro fichas.
+- `enfermedades.html`: catálogo de enfermedades.
+- `enfermedades/vih-1.html`: ficha de VIH-1.
+- `enfermedades/vih-2.html`: ficha de VIH-2.
+- `enfermedades/hepatitis-b.html`: ficha de hepatitis B.
+- `enfermedades/sifilis.html`: ficha de sífilis.
+- `ubicaciones.html`: búsqueda voluntaria de centros de atención por ciudad o ubicación del dispositivo.
+- `preguntas.html`: respuestas a dudas comunes.
+- `css/styles.css`: diseño responsive, tipografía y navegación.
+- `js/script.js`: menú desplegable y búsquedas de centros.
+- `assets/vitascan-logo.jpg`: logotipo.
 
-## Cómo funciona el QR
-
-Cada QR contiene una dirección de esta página con un identificador en el fragmento de URL, por ejemplo:
-
-```
-https://TU-USUARIO.github.io/VITASCAN/#enfermedades/vih
-```
-
-Al abrirla, JavaScript reconoce el identificador y muestra directamente la ficha correspondiente. En la sección “Un código, una ficha informativa” se puede seleccionar una enfermedad, generar el QR y descargarlo como PNG.
-
-Para que los QR funcionen desde otros teléfonos, primero publica el sitio en GitHub Pages y genera/descarga los códigos desde la dirección pública, no desde una vista previa local.
+No se generan ni muestran códigos QR dentro del software. Los QR de acceso pueden crearse por separado como imágenes, apuntando a las URLs públicas de cada ficha.
 
 ## Publicar en GitHub Pages
 
-1. En GitHub abre **Settings → Pages**.
-2. En **Build and deployment**, selecciona **Deploy from a branch**.
-3. Selecciona la rama principal y la carpeta **/(root)**.
-4. Guarda y espera a que GitHub publique el sitio.
-5. Abre la dirección pública y genera nuevamente los QR.
+1. Abre **Settings → Pages** en GitHub.
+2. Selecciona **Deploy from a branch**.
+3. Configura la rama `main` y carpeta `/(root)`.
+4. Guarda la configuración.
 
-## Nota importante de salud
+URL prevista: https://vaaalalamilla.github.io/VITASCAN/
 
-Este prototipo ofrece información educativa. No diagnostica, no interpreta pruebas, no determina etapas individuales por síntomas y no sustituye una consulta médica. Los síntomas son orientativos y algunas infecciones pueden no presentar síntomas.
+## Centros de atención y privacidad
 
-La clasificación “muestras indicadas” no afirma que todas estas infecciones se detecten con saliva. El tipo de muestra y la prueba deben confirmarse con el laboratorio y el personal de salud. Por ejemplo, clamidia y gonorrea suelen detectarse mediante pruebas moleculares en orina o hisopos del sitio correspondiente; el VPH se evalúa con pruebas específicas según la zona y la indicación clínica.
+La búsqueda abre Google Maps para encontrar centros cercanos. La geolocalización solo se solicita al pulsar «Usar mi ubicación» y la persona puede negarse; alternativamente, puede escribir una ciudad o colonia. VITASCAN no almacena sus coordenadas ni el texto de búsqueda. Al abrir Google Maps, ese proveedor gestiona los datos de la búsqueda conforme a sus propias políticas.
 
-## Equipo Tucancitos
+Los servicios y horarios deben verificarse con el centro antes de acudir.
 
-- Director General: Jonathan Mis
-- Desarrollo Web: Valeria Cano
-- Marketing y Ventas: Isabel González
-- Recursos Humanos: Janeth Gonzalez
-- Finanzas: Jaqueline Aleman
+## Aviso de salud
+
+VITASCAN es un proyecto educativo; no diagnostica enfermedades, no sustituye las pruebas de laboratorio ni la valoración profesional. Las fichas enlazan a fuentes médicas y explican posibles síntomas, pruebas, prevención, tratamiento y seguimiento sin emitir diagnósticos individuales.
