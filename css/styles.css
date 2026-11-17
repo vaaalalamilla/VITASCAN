@@ -32,3 +32,5 @@
 .qr-direct{display:block;margin-top:16px;color:var(--bondi-dark);font-size:12px;font-weight:700;text-decoration:underline}
 @media(max-width:950px){.site-header{gap:15px}.main-nav{gap:12px}}
 @media(max-width:680px){.nav-dropdown{display:block}.dropdown-toggle{padding:0}.dropdown-menu{position:static;display:none;box-shadow:none;border:0;border-radius:0;padding:6px 0 0 10px;max-height:40vh;width:auto}.nav-dropdown.open .dropdown-menu{display:flex}.nav-dropdown:not(.open) .dropdown-menu{display:none}.page-intro{padding:65px 6% 48px}.standalone-steps{grid-template-columns:1fr}.detail-hero h1{font-size:27px}}
+
+.brand-logo{display:block;width:54px;height:54px;object-fit:contain;flex:none;background:white;border-radius:9px}.site-header .brand{gap:7px}.brand-footer .brand-logo{background:white}@media(max-width:680px){.brand-logo{width:47px;height:47px}}

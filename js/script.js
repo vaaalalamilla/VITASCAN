@@ -1,5 +1,5 @@
 // VITASCAN: navegación entre páginas, filtros, lista de síntomas y QR.
-document.addEventListener("DOMContentLoaded",()=>{
+document.addEventListener("DOMContentLoaded",()=>{const logoPath=location.pathname.includes("/enfermedades/")?"../assets/vitascan-logo.jpg":"assets/vitascan-logo.jpg";document.querySelectorAll(".brand-mark").forEach(el=>{const img=document.createElement("img");img.src=logoPath;img.alt="Logotipo VitaScan";img.className="brand-logo";el.replaceWith(img);});
  const menu=document.querySelector(".menu-toggle"),nav=document.getElementById("mainNav");
  if(menu&&nav){menu.addEventListener("click",()=>{const open=nav.classList.toggle("open");menu.setAttribute("aria-expanded",String(open));});}
  const drop=document.querySelector(".nav-dropdown"),toggle=document.querySelector(".dropdown-toggle");
