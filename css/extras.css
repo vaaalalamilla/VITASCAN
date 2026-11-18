@@ -72,3 +72,14 @@
 #symptomOptions .symptom input[type="checkbox"]{box-sizing:border-box;flex:0 0 18px;width:18px!important;height:18px!important;min-width:18px!important;min-height:18px!important;padding:0!important;margin:0!important;accent-color:#079a9e}
 #symptomOptions .symptom:has(input:checked){border-color:#078f95;background:#e5faf5}
 @media(max-width:620px){#symptomOptions .symptom-choice-grid{grid-template-columns:1fr}}
+
+/* Vista previa visual de síntomas según el tema seleccionado */
+.example-symptoms{margin:20px 0;padding:20px;border-radius:16px;border:1px solid #a9d8ce;background:#fff;scroll-margin-top:110px}
+.example-symptoms h3{margin:0 0 9px}
+.example-symptoms>label{display:block;font-size:15px;font-weight:800;margin:15px 0 8px}
+.example-symptoms>select{width:100%;max-width:500px;min-height:48px;padding:10px;border-radius:10px;border:1px solid #b5d6d0;background:#fff}
+.example-symptom-group{margin-top:16px}.example-symptom-group h4{margin:0 0 10px;color:#176b73;font-size:15px}
+.example-symptom-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+.example-symptom-pill{display:flex;align-items:center;min-height:48px;padding:10px 13px;background:#eaf8f4;border:1px solid #b5ded4;border-radius:10px;font-size:14px;line-height:1.4}
+.premium-example-target[hidden]{display:none!important}.premium-example-target{margin-top:10px}
+@media(max-width:560px){.example-symptom-grid{grid-template-columns:1fr}.example-symptoms{padding:14px}}
