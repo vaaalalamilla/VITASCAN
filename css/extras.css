@@ -50,3 +50,25 @@
 .poll-field input[type=radio]{flex:0 0 auto;accent-color:#078f95}
 @media(max-width:780px){.poll-field{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:460px){.poll-field{grid-template-columns:1fr}}
+
+/* Corrección real: los inputs radio estaban heredando width:100% y min-height:48px del formulario .stack. */
+#eventFeedbackForm .poll-field{display:block;margin:0;min-width:0;padding:15px 18px 18px}
+#eventFeedbackForm .poll-field legend{padding:0 8px;font-weight:800}
+#eventFeedbackForm .poll-options{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+#eventFeedbackForm .poll-options label{box-sizing:border-box;display:flex;min-width:0;width:100%;min-height:60px;align-items:center;justify-content:center;gap:9px;padding:11px;border:1px solid #b8ded5;border-radius:12px;background:#f3fbf8;text-align:center;font-size:15px;font-weight:650;line-height:1.4;cursor:pointer}
+#eventFeedbackForm .poll-options label:hover{border-color:#079a9e;background:#e7f8f3}
+#eventFeedbackForm .poll-options label:has(input:checked){border-color:#078f95;background:#dff6ee;color:#076d74}
+#eventFeedbackForm .poll-options label:focus-within{outline:2px solid #078f95;outline-offset:2px}
+#eventFeedbackForm .poll-options input[type="radio"]{appearance:auto;box-sizing:border-box;width:18px!important;height:18px!important;min-width:18px!important;min-height:18px!important;max-width:18px;max-height:18px;padding:0!important;margin:0!important;flex:0 0 18px;border:0;accent-color:#078f95}
+@media(max-width:850px){#eventFeedbackForm .poll-options{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:440px){#eventFeedbackForm .poll-options{grid-template-columns:1fr}}
+
+/* Seguimiento Premium: secciones y opciones uniformes, adaptables a la pantalla */
+#symptomOptions.symptom-grid{display:flex;flex-direction:column;gap:16px}
+#symptomOptions .symptom-group{display:block;min-width:0;margin:0;padding:16px;border:1px solid #bdded7;border-radius:15px;background:#fbfefd}
+#symptomOptions .symptom-group legend{padding:0 8px;font-size:15px;font-weight:800;color:#126975}
+#symptomOptions .symptom-choice-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+#symptomOptions .symptom{display:flex;align-items:center;justify-content:flex-start;min-height:64px;min-width:0;width:100%;padding:13px;line-height:1.4;background:#fff;border-radius:12px;font-size:14px;font-weight:600;overflow-wrap:anywhere}
+#symptomOptions .symptom input[type="checkbox"]{box-sizing:border-box;flex:0 0 18px;width:18px!important;height:18px!important;min-width:18px!important;min-height:18px!important;padding:0!important;margin:0!important;accent-color:#079a9e}
+#symptomOptions .symptom:has(input:checked){border-color:#078f95;background:#e5faf5}
+@media(max-width:620px){#symptomOptions .symptom-choice-grid{grid-template-columns:1fr}}
