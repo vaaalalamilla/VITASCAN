@@ -1,42 +1,37 @@
-# VITASCAN · Mi diario de síntomas
+# VITASCAN — Aplicación multipágina
 
-Aplicación web educativa para **registrar síntomas diariamente** y consultar historial personal en un dispositivo.
+VITASCAN es un prototipo educativo que organiza síntomas, estados de ánimo, citas y recordatorios y ofrece información general sobre VIH-1, VIH-2, hepatitis B, sífilis, gonorrea y VPH.
 
-## Seis temas disponibles
+## Páginas independientes
 
-VIH-1, VIH-2, hepatitis B, sífilis, gonorrea y virus del papiloma humano (VPH).
+- `index.html`: inicio y acceso a las funciones.
+- `calendario.html`: calendario mensual, registro diario, intensidad, estado de ánimo, historial, edición, exportación y recordatorios de citas o medicamentos indicados por un profesional.
+- `comunidad.html`: subforos anónimos de demostración para crear hilos y responder.
+- `informacion.html`: fichas informativas de las seis enfermedades, síntomas posibles y fuentes médicas.
+- `centros.html`: búsquedas de centros en Google Maps por ciudad o geolocalización voluntaria, y preguntas frecuentes.
+- `asistente.html`: asistente de demostración con respuestas predefinidas sobre cómo utilizar la aplicación.
+- `configuracion.html`: modo discreto para avisos, permiso del navegador, exportación y eliminación de datos.
+- `assets/vitascan-logo.jpg`: logotipo original.
+- `css/styles.css`: estilos responsive comunes.
+- `js/script.js`: interacciones y almacenamiento local.
 
-## Funcionalidades incluidas
+## Qué funciona / limitaciones
 
-- Registro con fecha y enfermedad o tema de seguimiento.
-- Casillas con síntomas frecuentes según el tema; síntoma adicional, intensidad y notas.
-- Opción «Hoy no he notado síntomas».
-- Historial local, filtrado por enfermedad, edición, eliminación y exportación JSON.
-- Indicadores de días y registros guardados, sin interpretar ni diagnosticar síntomas.
-- Información educativa por enfermedad con enlaces a fuentes médicas.
-- Zona **demostrativa local** de comentarios sin nombre: estos mensajes **no son públicos ni visibles entre usuarios**.
-- Búsqueda voluntaria de centros de atención por ciudad o permiso de ubicación.
-- Diseño adaptable para computadora y celular y logotipo original.
+**Registros:** se guardan en `localStorage` del navegador con la clave `vitascan.records.v2` para conservar registros de la versión anterior en ese navegador. Se pueden editar y exportar. No se sincronizan entre dispositivos. Los registros pueden perderse si se borran datos del sitio.
 
-## Privacidad
+**Recordatorios:** se guardan en el navegador. Los avisos requieren que VITASCAN esté abierta y que se hayan activado permisos de notificación. No existe servicio push con la página cerrada ni garantías de entrega. En modo discreto se omiten detalles sensibles de la actividad. No es un sistema de recordatorios médicos críticos.
 
-Los registros se guardan con `localStorage` del navegador. No existe cuenta personal, servidor ni sincronización. Otras personas que usen el mismo dispositivo y navegador podrían acceder al historial. Borrar los datos del sitio o usar modo privado puede eliminar los registros; se recomienda exportarlos cuando sea necesario. Los JSON exportados también contienen datos personales de salud: deben protegerse.
+**Comunidad:** por ahora los hilos y las respuestas son una demostración **local**, no una comunidad entre usuarios conectados. Para publicar conversaciones reales y anónimas se necesitaría backend, base de datos, herramientas de reporte y moderación y una política de privacidad.
 
-## Comunidad anónima compartida: pendiente
+**Asistente virtual:** contesta preguntas frecuentes sobre el uso de VITASCAN mediante respuestas predeterminadas. No usa un modelo de lenguaje, no accede al historial y no ofrece diagnóstico ni indicaciones médicas personalizadas.
 
-**No hay comentarios entre visitantes todavía.** Para crear una comunidad pública se requiere un servicio backend y base de datos, permisos, control de abuso y moderación, opciones de reportar/borrar contenido, política de privacidad y medidas para evitar publicar información identificable o recomendaciones médicas peligrosas. No se han simulado comentarios de pacientes reales.
+**Ubicaciones:** la búsqueda abre Google Maps; no guarda coordenadas. Google Maps maneja los datos de la consulta bajo sus propias políticas. Hay que verificar teléfonos y servicios directamente con los centros.
 
-## Aviso médico
+## Privacidad y salud
 
-VitaScan sirve para organizar notas, no para confirmar infecciones, distinguir VIH-1 de VIH-2, establecer etapas ni decidir tratamientos. Algunas infecciones no presentan síntomas. Se recomienda valoración de personal de salud y pruebas específicas cuando corresponda.
+La información se conserva únicamente en el navegador; cualquier persona con acceso a ese navegador podría consultarla. Los archivos exportados pueden contener información médica sensible y deben protegerse. El software no confirma enfermedades, no diagnostica, no deduce etapas y no recomienda medicamentos ni dosis. Los síntomas pueden tener otras causas o estar ausentes.
 
-## Publicar
+## Publicación
 
-En GitHub → Settings → Pages → Deploy from a branch → `main` → `/(root)`. Dirección prevista: https://vaaalalamilla.github.io/VITASCAN/
-
-## Estructura
-
-- `index.html`: interfaz principal.
-- `css/styles.css`: estilos responsive.
-- `js/script.js`: datos, formularios y persistencia local.
-- `assets/vitascan-logo.jpg`: logo del proyecto.
+GitHub → Settings → Pages → Deploy from a branch → main → /(root).
+URL prevista: https://vaaalalamilla.github.io/VITASCAN/
