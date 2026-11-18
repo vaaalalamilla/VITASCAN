@@ -1,37 +1,53 @@
-# VITASCAN — Aplicación multipágina
+# VITASCAN · Salud sexual, acompañamiento y seguimiento personal
 
-VITASCAN es un prototipo educativo que organiza síntomas, estados de ánimo, citas y recordatorios y ofrece información general sobre VIH-1, VIH-2, hepatitis B, sífilis, gonorrea y VPH.
+**VITASCAN es un prototipo educativo de apoyo**, centrado en las personas que desean informarse y organizar su atención en salud sexual, particularmente sobre VIH-1, VIH-2, hepatitis B, sífilis, gonorrea y VPH. **No diagnostica, no interpreta enfermedades ni sustituye a profesionales o pruebas médicas.**
 
-## Páginas independientes
+## Funciones gratuitas
 
-- `index.html`: inicio y acceso a las funciones.
-- `calendario.html`: calendario mensual, registro diario, intensidad, estado de ánimo, historial, edición, exportación y recordatorios de citas o medicamentos indicados por un profesional.
-- `comunidad.html`: subforos anónimos de demostración para crear hilos y responder.
-- `informacion.html`: fichas informativas de las seis enfermedades, síntomas posibles y fuentes médicas.
-- `centros.html`: búsquedas de centros en Google Maps por ciudad o geolocalización voluntaria, y preguntas frecuentes.
-- `asistente.html`: asistente de demostración con respuestas predefinidas sobre cómo utilizar la aplicación.
-- `configuracion.html`: modo discreto para avisos, permiso del navegador, exportación y eliminación de datos.
-- `assets/vitascan-logo.jpg`: logotipo original.
-- `css/styles.css`: estilos responsive comunes.
-- `js/script.js`: interacciones y almacenamiento local.
+- `index.html`: presentación y acceso a los recursos.
+- `comunidad.html`: foro local de prueba por temas, sin chats privados.
+- `informacion.html`: fichas educativas con fuentes externas.
+- `centros.html`: mapa / búsqueda en Google Maps por ciudad o ubicación voluntaria (la ubicación no se guarda en VITASCAN).
+- `eventos.html`: enlaces a fuentes oficiales sobre campañas de salud y empleo. Incluye **encuesta local** sobre experiencias en eventos con preguntas de opción múltiple y **buzón flotante de ideas** en todas las páginas.
+- `calendario.html`: calendario y recordatorios de citas, medicamentos indicados y otras actividades.
+- `configuracion.html`: modo discreto, permisos de avisos, exportación y eliminación de datos.
+- `planes.html`: explicación del modelo gratuito y Premium.
 
-## Qué funciona / limitaciones
+## Funciones Premium — vista previa educativa
 
-**Registros:** se guardan en `localStorage` del navegador con la clave `vitascan.records.v2` para conservar registros de la versión anterior en ese navegador. Se pueden editar y exportar. No se sincronizan entre dispositivos. Los registros pueden perderse si se borran datos del sitio.
+Desde `planes.html` se activa una **vista previa Premium sin pago** por sesión del navegador. No se cobra, no se verifica una suscripción ni se solicitan tarjetas.
 
-**Recordatorios:** se guardan en el navegador. Los avisos requieren que VITASCAN esté abierta y que se hayan activado permisos de notificación. No existe servicio push con la página cerrada ni garantías de entrega. En modo discreto se omiten detalles sensibles de la actividad. No es un sistema de recordatorios médicos críticos.
+- En `calendario.html`, el usuario puede elegir un tema de salud en seguimiento de forma voluntaria, con aviso sobre sensibilidad de la información. La selección personaliza las listas de síntomas **sin implicar diagnóstico**.
+- Puede registrar síntomas, intensidad, emociones y notas. El programa cuenta con listas de seguimiento diferentes según el tema.
+- `reportes.html` presenta gráficas de frecuencia y un resumen por fechas para imprimir / guardar como PDF con la opción del navegador.
+- El registro personal y su exportación no deben quedar secuestrados por un plan de pago. Los registros anteriores permanecen en este navegador.
 
-**Comunidad:** por ahora los hilos y las respuestas son una demostración **local**, no una comunidad entre usuarios conectados. Para publicar conversaciones reales y anónimas se necesitaría backend, base de datos, herramientas de reporte y moderación y una política de privacidad.
+Los planes comerciales previstos son **mensual** y **anual**, con precios pendientes de evaluación. El procesamiento de pagos real requiere infraestructura y proveedor especializado.
 
-**Asistente virtual:** contesta preguntas frecuentes sobre el uso de VITASCAN mediante respuestas predeterminadas. No usa un modelo de lenguaje, no accede al historial y no ofrece diagnóstico ni indicaciones médicas personalizadas.
+## Privacidad y necesidad de datos
 
-**Ubicaciones:** la búsqueda abre Google Maps; no guarda coordenadas. Google Maps maneja los datos de la consulta bajo sus propias políticas. Hay que verificar teléfonos y servicios directamente con los centros.
+Solo se solicita información vinculada a una función concreta:
+- Tema de salud: adaptar listas de seguimiento (opcional y sensible).
+- Síntomas, emociones, intensidad y notas: crear un historial personal visual (Premium).
+- Fecha, horario y descripción de medicamentos/citas: organizar recordatorios (Gratis).
+- Ubicación: realizar una búsqueda voluntaria de centros; los resultados se abren en Google Maps.
+- Respuestas sobre eventos e ideas: evaluar actividades y recoger sugerencias **en el navegador**, sin envío externo.
+- Conversaciones de foro: demostración anónima local; no es una comunidad compartida por internet.
 
-## Privacidad y salud
+**La información se almacena en `localStorage` y no se cifra como un sistema clínico.** En un equipo compartido otras personas pueden acceder a esos datos. **No debe utilizarse con datos sensibles reales hasta construir una solución segura y obtener una revisión legal.** En esta demostración no existen cuentas, autenticación, moderación centralizada, servicios de pago ni backend.
 
-La información se conserva únicamente en el navegador; cualquier persona con acceso a ese navegador podría consultarla. Los archivos exportados pueden contener información médica sensible y deben protegerse. El software no confirma enfermedades, no diagnostica, no deduce etapas y no recomienda medicamentos ni dosis. Los síntomas pueden tener otras causas o estar ausentes.
+El usuario puede exportar o borrar los datos locales desde Configuración. La vista Premium puede desactivarse cerrando la pestaña/sesión; el almacenamiento personal se conserva hasta su eliminación.
 
-## Publicación
+Antes del uso real: revisar la ley mexicana aplicable a datos personales sensibles, aviso de privacidad, finalidad y minimización, consentimiento válido, medidas de seguridad, políticas de conservación, derechos de titulares, auditorías y procesos contra abuso en la comunidad. No basta con un aviso para eximir responsabilidades.
 
-GitHub → Settings → Pages → Deploy from a branch → main → /(root).
-URL prevista: https://vaaalalamilla.github.io/VITASCAN/
+## Archivos técnicos
+
+- `css/styles.css`: estilos originales.
+- `css/extras.css`: estilos de gráficas, encuestas, planes y buzón.
+- `js/script.js`: calendario, foro, información, mapa y configuración.
+- `js/extras.js`: vista previa Premium, gráficas, PDF mediante impresión, encuesta y buzón.
+- `assets/`: recursos gráficos.
+
+GitHub Pages: https://vaaalalamilla.github.io/VITASCAN/
+
+**El mapa enlaza a Google Maps, no acredita consultorios ni confirma servicios.** La encuesta y el buzón no remiten resultados a instituciones. Los datos de registro no se comparten automáticamente con ningún centro médico.
