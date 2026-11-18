@@ -18,7 +18,7 @@ VITASCAN es un **proyecto educativo** para organizar síntomas, estados de ánim
 - `planes.html`: propuesta de planes, **sin pagos reales**
 
 ### Consultorio
-- `acceso.html`: puerta de entrada obligatoria para escoger paciente o profesional; cédula de 7 u 8 dígitos solo se comprueba en formato y se descarta, **sin consulta oficial ni autenticación real**
+- `acceso.html`: puerta de entrada obligatoria para escoger paciente o profesional; códigos de cédula inventados (00000001 / 00000002) seleccionan el médico ficticio correspondiente, sin verificación oficial, **sin consulta oficial ni autenticación real**
 - `crm.html`: panel ficticio restringido por navegación de demostración; solo muestra citas asociadas al ID del profesional elegido al entrar. **No equivale a autorización segura**
 - `moderacion.html`: reporte y ocultamiento de publicaciones/respuestas locales **sin permisos de moderador reales**
 
