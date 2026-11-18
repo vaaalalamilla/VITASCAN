@@ -7,3 +7,9 @@
 .hero-logo{display:block;width:100%;max-width:420px;height:auto;object-fit:contain;border-radius:18px}
 @media(max-width:900px){.hero-with-logo{grid-template-columns:1fr 320px;gap:25px}.hero-logo-panel{padding:14px}}
 @media(max-width:700px){.hero-with-logo{grid-template-columns:1fr;text-align:left;gap:28px}.hero-logo-panel{width:min(100%,360px);margin:0 auto;padding:14px}.hero-logo{max-width:300px}}
+
+/* Corrección del logotipo visible en el banner */
+.hero-with-logo{display:grid!important;grid-template-columns:minmax(0,1fr) minmax(330px,.8fr)!important;align-items:center!important;gap:50px!important}
+.hero-with-logo .hero-logo-panel{display:flex!important;align-items:center;justify-content:center;background:white!important;min-height:390px;padding:20px;border:2px solid #b8e8e0;border-radius:26px;box-shadow:0 25px 60px rgba(12,105,107,.14)}
+.hero-with-logo .hero-logo{display:block!important;visibility:visible!important;opacity:1!important;width:min(100%,420px)!important;height:auto!important;max-width:none!important;object-fit:contain}
+@media(max-width:760px){.hero-with-logo{grid-template-columns:1fr!important;gap:25px!important}.hero-with-logo .hero-logo-panel{min-height:0!important;max-width:390px;margin:auto;width:100%;padding:16px}.hero-with-logo .hero-logo{width:100%!important}}
