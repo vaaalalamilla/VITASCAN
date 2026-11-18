@@ -1,38 +1,42 @@
-# VITASCAN
+# VITASCAN · Mi diario de síntomas
 
-Sitio web educativo de información y orientación sobre VIH-1, VIH-2, hepatitis B y sífilis. Cada enfermedad dispone de una ficha HTML independiente con apartados detallados y fuentes de información.
+Aplicación web educativa para **registrar síntomas diariamente** y consultar historial personal en un dispositivo.
 
-## Estructura del sitio
+## Seis temas disponibles
 
-- `index.html`: página de inicio y accesos a las cuatro fichas.
-- `enfermedades.html`: catálogo de enfermedades.
-- `enfermedades/vih-1.html`: ficha de VIH-1.
-- `enfermedades/vih-2.html`: ficha de VIH-2.
-- `enfermedades/hepatitis-b.html`: ficha de hepatitis B.
-- `enfermedades/sifilis.html`: ficha de sífilis.
-- `ubicaciones.html`: búsqueda voluntaria de centros de atención por ciudad o ubicación del dispositivo.
-- `preguntas.html`: respuestas a dudas comunes.
-- `css/styles.css`: diseño responsive, tipografía y navegación.
-- `js/script.js`: menú desplegable y búsquedas de centros.
-- `assets/vitascan-logo.jpg`: logotipo.
+VIH-1, VIH-2, hepatitis B, sífilis, gonorrea y virus del papiloma humano (VPH).
 
-No se generan ni muestran códigos QR dentro del software. Los QR de acceso pueden crearse por separado como imágenes, apuntando a las URLs públicas de cada ficha.
+## Funcionalidades incluidas
 
-## Publicar en GitHub Pages
+- Registro con fecha y enfermedad o tema de seguimiento.
+- Casillas con síntomas frecuentes según el tema; síntoma adicional, intensidad y notas.
+- Opción «Hoy no he notado síntomas».
+- Historial local, filtrado por enfermedad, edición, eliminación y exportación JSON.
+- Indicadores de días y registros guardados, sin interpretar ni diagnosticar síntomas.
+- Información educativa por enfermedad con enlaces a fuentes médicas.
+- Zona **demostrativa local** de comentarios sin nombre: estos mensajes **no son públicos ni visibles entre usuarios**.
+- Búsqueda voluntaria de centros de atención por ciudad o permiso de ubicación.
+- Diseño adaptable para computadora y celular y logotipo original.
 
-1. Abre **Settings → Pages** en GitHub.
-2. Selecciona **Deploy from a branch**.
-3. Configura la rama `main` y carpeta `/(root)`.
-4. Guarda la configuración.
+## Privacidad
 
-URL prevista: https://vaaalalamilla.github.io/VITASCAN/
+Los registros se guardan con `localStorage` del navegador. No existe cuenta personal, servidor ni sincronización. Otras personas que usen el mismo dispositivo y navegador podrían acceder al historial. Borrar los datos del sitio o usar modo privado puede eliminar los registros; se recomienda exportarlos cuando sea necesario. Los JSON exportados también contienen datos personales de salud: deben protegerse.
 
-## Centros de atención y privacidad
+## Comunidad anónima compartida: pendiente
 
-La búsqueda abre Google Maps para encontrar centros cercanos. La geolocalización solo se solicita al pulsar «Usar mi ubicación» y la persona puede negarse; alternativamente, puede escribir una ciudad o colonia. VITASCAN no almacena sus coordenadas ni el texto de búsqueda. Al abrir Google Maps, ese proveedor gestiona los datos de la búsqueda conforme a sus propias políticas.
+**No hay comentarios entre visitantes todavía.** Para crear una comunidad pública se requiere un servicio backend y base de datos, permisos, control de abuso y moderación, opciones de reportar/borrar contenido, política de privacidad y medidas para evitar publicar información identificable o recomendaciones médicas peligrosas. No se han simulado comentarios de pacientes reales.
 
-Los servicios y horarios deben verificarse con el centro antes de acudir.
+## Aviso médico
 
-## Aviso de salud
+VitaScan sirve para organizar notas, no para confirmar infecciones, distinguir VIH-1 de VIH-2, establecer etapas ni decidir tratamientos. Algunas infecciones no presentan síntomas. Se recomienda valoración de personal de salud y pruebas específicas cuando corresponda.
 
-VITASCAN es un proyecto educativo; no diagnostica enfermedades, no sustituye las pruebas de laboratorio ni la valoración profesional. Las fichas enlazan a fuentes médicas y explican posibles síntomas, pruebas, prevención, tratamiento y seguimiento sin emitir diagnósticos individuales.
+## Publicar
+
+En GitHub → Settings → Pages → Deploy from a branch → `main` → `/(root)`. Dirección prevista: https://vaaalalamilla.github.io/VITASCAN/
+
+## Estructura
+
+- `index.html`: interfaz principal.
+- `css/styles.css`: estilos responsive.
+- `js/script.js`: datos, formularios y persistencia local.
+- `assets/vitascan-logo.jpg`: logo del proyecto.
