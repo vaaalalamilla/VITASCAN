@@ -22,3 +22,8 @@
 @media(max-width:900px){.plan-grid,.report-columns{grid-template-columns:1fr}}
 @media(max-width:680px){.mini-metrics{grid-template-columns:1fr 1fr}.suggestion-float{bottom:14px;right:14px}.main-nav{gap:1px}}
 @media print{.topbar,footer,.suggestion-float,.page-intro,#reportPremiumNotice,#refreshReport,#printReport,.report-sheet~*{display:none!important}#reportPremiumContent>.panel{display:none!important}body{background:#fff}.content{padding:0}.report-sheet{border:0;padding:0}.mini-metrics{grid-template-columns:repeat(3,1fr)}.report-columns{grid-template-columns:repeat(2,1fr)}}
+
+.billing-choice{display:inline-flex;gap:5px;padding:5px;background:#e5f7f2;border-radius:16px;align-self:flex-start}
+.billing-btn{border:0;border-radius:12px;padding:9px 16px;background:transparent;color:#236066;font-weight:800}
+.billing-btn.active{background:#078f95;color:white}
+@media(max-width:600px){.billing-choice{display:flex;width:100%}.billing-btn{flex:1}}
